@@ -24,5 +24,4 @@
         inventory: Local
         project: "Ansible Synergy Project"
         playbook: SynTest01.yml
-        machine_credential: Local
         state: present
