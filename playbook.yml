@@ -19,9 +19,9 @@
         
     - name: Create Synergy Template
       tower_job_template:
-        name: "Ansible Synergy Template"
+        name: Ansible Synergy Template
         job_type: run
         inventory: Local
-        project: "Ansible Synergy Project"
+        project: Ansible Synergy Project
         playbook: SynTest01.yml
         state: present
