@@ -8,11 +8,21 @@
         organization: Default
         state: present
 
-    - name: Add tower project
+    - name: Add Synergy project
       tower_project:
         name: "Ansible Synergy Project"
         description: "Synergy playbooks"
         organization: "Default"
         state: present
-        scm_url: https://github.com/jzl2w8/AnsibleSynergy.git
+        scm_url: https://github.com/dayglo/AnsibleSynergy.git
         scm_type: git
+        
+    - name: Create Synergy Template
+      tower_job_template:
+        name: "Ansible Synergy Template"
+        job_type: run
+        inventory: Local
+        project: "Ansible Synergy Project"
+        playbook: SynTest01.yml
+        machine_credential: Local
+        state: present
