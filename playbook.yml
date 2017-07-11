@@ -21,7 +21,8 @@
       tower_job_template:
         name: Ansible Synergy Template
         job_type: run
-        inventory: Local
+        inventory: Demo Inventory
+        machine_credential: Demo Credential
         project: Ansible Synergy Project
         playbook: SynTest01.yml
         state: present
